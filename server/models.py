@@ -4,7 +4,7 @@ class Wager(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     team_name = db.Column(db.String(100), unique=False, nullable=False)
     odds = db.Column(db.Integer, nullable=False)
-    wager = db.Column(db.Integer, nullable=False)
+    wager = db.Column(db.String(100), nullable=False)
     payout = db.Column(db.Integer, nullable=False)
 
     def to_json(self):
